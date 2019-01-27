@@ -1,0 +1,34 @@
+[user]
+	name = Ozy Wu-Li
+	email = ozy.wu.lI@gmail.com
+[push]
+	default = matching
+
+[alias]
+	st = status
+	co = checkout
+	cob = checkout -b
+	br = branch
+	ci = commit
+	please = push --force-with-lease
+	
+
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+[format]
+        pretty = "Commit:  %C(yellow)%H%nAuthor:  %C(green)%aN <%aE>%nDate:    (%C(red)%ar%Creset) %ai%nSubject: %s%n%n%b"
+
+[core]
+	excludesfile = /Users/ozywuli/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[credential]
+	helper = cache
+[commit]
+	template = /Users/ozywuli/.stCommitMsg
